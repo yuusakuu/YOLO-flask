@@ -1,0 +1,14 @@
+Flask
+Jinja2
+numpy
+scikit-learn
+scipy
+virtualenv
+pillow
+flask_restful 
+opencv-python
+matplotlib
+torch
+scikit-image
+tensorflow
+core.utils
