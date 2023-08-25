@@ -1,0 +1,78 @@
+<html>
+
+<head>
+    <title>YOLO Model IMAGE DETECTOR</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'style.css') }}">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+<h1>YOLO Model IMAGE DETECTOR</h1>
+<div class="agile-its">
+    <h2>IMAGE DETECTOR</h2>
+    <div class="w3layouts">
+        <div class="photos-upload-view">
+            <form id="upload" action="/predict" method="POST" enctype="multipart/form-data">
+                <div class="upload-btn-wrapper">
+                    <button class="btn">이미지 업로드</button>
+                    <input type="file" value="Upload" name="image">
+                </div>
+                <br>
+            </br>
+                <input type="submit" value="이미지 예측 결과">
+                {% if ml_label %}
+                    <span class="result">
+                        {{ ml_label }}
+                    </span>
+                {% endif %} 
+            </form>
+            <br>
+            </br>
+            <form id="upload5" action="/video2" method="POST" enctype="multipart/form-data">
+                <div class="upload-btn-wrapper5">
+                    <button class="btn">동영상 선택</button>
+                    <input type="file" value="Upload5" name="stream">
+                </div>
+                <br>
+            </br>
+                <input type="submit" value="동영상 업로드">
+                {% if ml_label3 %}
+                    <span class="result">
+                        {{ ml_label3 }}
+                    </span>
+                {% endif %}
+            </form>
+            <form id="upload7" action="/video_post" method="GET" enctype="multipart/form-data">
+                <input type="submit" value="동영상 예측 결과">
+            </form>
+            <br>
+            </br>
+            <form id="upload3" action="/cam_post" method="GET" enctype="multipart/form-data">
+                <!-- <div class="upload-btn-wrapper3">
+                    <button class="btn">카메라 연결</button>
+                    <input type="file" value="Upload3" name="camera">
+                </div> -->
+                
+                <input type="submit" value="실시간 예측 결과">
+                {% if ml_label3 %}
+                    <span class="result">
+                        {{ ml_label3 }}
+                    </span>
+                {% endif %}
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>
+
+<!-- <form id="upload6" action="/video3" method="GET" enctype="multipart/form-data">
+    <input type="submit" value="동영상 조회하기">
+    {% if ml_label6 %}
+        <span class="result">
+            {{ ml_label6 }}
+        </span>
+    {% endif %}
+</form> -->
