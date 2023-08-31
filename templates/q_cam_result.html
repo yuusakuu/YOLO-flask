@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <title>Camera Video Streaming</title>
+  </head>
+  <body>
+  <div class="agile-its">
+    <div class="w3layouts">
+        <div class="view">    
+            <span class="result"> 
+                <center>
+                    <h1>Result</h1>
+                    <p>
+                    {% if TF %}
+                        <meta http-equiv="refresh" content="0; url=q_cam_post_correct"></meta>
+                    {% else %}
+                        <meta http-equiv="refresh" content="0; url=q_cam_post_false"></meta>
+                    {% endif %} 
+                    <h2>{{ml_label}}</h2>
+                    <h2>{{label}}</h2>
+                    <h2>{{TF}}</h2>
+                    </p>
+            </center>
+            </span> 
+        </div>
+    </div>
+    </body>
+</html>
+
+
+    

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Camera Video Streaming</title>
+  </head>
+
+  <body>
+    <center>
+    <h1>Camera Video Streaming</h1>
+        
+      <img src="{{ url_for('q_cam_post') }}" width="640" height="480" /> 
+    
+      <meta http-equiv="refresh" content="2; url=q_cam_post_result"></meta>
+      
+    <br>
+    </br>
+    <h2>문제</h2>
+    <h3>{{ ml_label }}</h3> 
+    <br>
+    </br>
+    <h3>{{ label }}</h3> 
+    </center>
+    </body>
+</html>

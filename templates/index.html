@@ -8,9 +8,9 @@
 </head>
 
 <body>
-<h1>YOLO Model IMAGE DETECTOR</h1>
+<h1>알파벳 맞추기</h1>
 <div class="agile-its">
-    <h2>IMAGE DETECTOR</h2>
+    <h2>이미지 검출기</h2>
     <div class="w3layouts">
         <div class="photos-upload-view">
             <form id="upload" action="/predict" method="POST" enctype="multipart/form-data">
@@ -49,15 +49,33 @@
             <br>
             </br>
             <form id="upload3" action="/cam_post" method="GET" enctype="multipart/form-data">
-                <!-- <div class="upload-btn-wrapper3">
-                    <button class="btn">카메라 연결</button>
-                    <input type="file" value="Upload3" name="camera">
-                </div> -->
                 
                 <input type="submit" value="실시간 예측 결과">
                 {% if ml_label3 %}
                     <span class="result">
                         {{ ml_label3 }}
+                    </span>
+                {% endif %}
+            </form>
+            <br>
+            </br>
+            <!-- <form id="upload4" action="/q_cam_post" method="GET" enctype="multipart/form-data">
+                
+                <input type="submit" value="문제 풀기">
+                {% if ml_label4 %}
+                    <span class="result">
+                        {{ ml_label4 }}
+                    </span>
+                {% endif %}
+            </form> -->
+            <!-- <br>
+            </br> -->
+            <form id="upload5" action="/question_list" method="GET" enctype="multipart/form-data">
+                
+                <input type="submit" value="문제 목록">
+                {% if ml_label4 %}
+                    <span class="result">
+                        {{ ml_label4 }}
                     </span>
                 {% endif %}
             </form>
@@ -67,12 +85,3 @@
 </body>
 
 </html>
-
-<!-- <form id="upload6" action="/video3" method="GET" enctype="multipart/form-data">
-    <input type="submit" value="동영상 조회하기">
-    {% if ml_label6 %}
-        <span class="result">
-            {{ ml_label6 }}
-        </span>
-    {% endif %}
-</form> -->

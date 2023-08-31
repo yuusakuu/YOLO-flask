@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Camera Video Streaming</title>
+  </head>
+
+  <body>
+    <center>
+    <h1>Wrong Answer</h1>
+        
+      <img src="{{ url_for('static', filename = 'correct/frame_false.png') }}" width="640" height="480" /> 
+      
+    <br>
+    </br>
+    <h2>Wrong!</h2>
+    <h3>The Answer is {{ml_label}}</h3> 
+    <br>
+    </br>
+    <p>
+        <button type="button" onclick="location.href='/question_list' ">뒤로가기</button>
+    </p>
+      </body>
+    </center>
+    </body>
+</html>

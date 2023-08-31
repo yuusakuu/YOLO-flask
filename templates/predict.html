@@ -8,9 +8,9 @@
 </head>
 
 <body>
-<h1>YOLO Image Detector</h1>
+<h1>알파벳 맞추기</h1>
 <div class="agile-its">
-    <h2>Image Detector</h2>
+    <h2>이미지 검출기</h2>
     <div class="w3layouts">
         <div class="view">    
             <span class="result"> 
@@ -20,16 +20,10 @@
                 </p>
                 <p>
                     {% if True %}
-                    <!-- <img src="{{ url_for('static', filename = 'uploads/20.jpg' ) }}" alt="사진" width="300" height="300"> -->
-                    <!-- <img src="{{ url_for('static', filename = 'uploads/${print_image}.jpg' ) }}" alt="사진" width="300" height="300"> -->
-                    <!-- <img src="{{ url_for('static', filename = print_image2) }}" alt="사진" width="300" height="300"> -->
-                    <!-- <img src="{{ url_for('static', filename = print_image) }}" alt="사진" width="300" height="300"> -->
                     <img src="{{ url_for('static', filename = 'uploads/savefig_default.png' ) }}" alt="사진" width="400" height="400">
-                    <!-- <img src="{{ print_image2 }}" alt="사진" width="300" height="300"> -->
                     {% endif %} 
 
                 </p>
-                <!-- {{print_image}} -->
                 <h2>{{ ml_label }}</h2> 
             </center>
             </span> 
